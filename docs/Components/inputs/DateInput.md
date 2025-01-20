@@ -1,4 +1,5 @@
 ---
+id: delete-input
 title: Input fecha
 ---
 

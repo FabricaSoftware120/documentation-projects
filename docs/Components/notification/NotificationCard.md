@@ -1,4 +1,5 @@
 ---
+id: notification-card
 title: Tarjeta de notificación
 ---
 

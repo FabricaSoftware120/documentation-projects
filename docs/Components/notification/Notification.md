@@ -1,4 +1,5 @@
 ---
+id: notification
 title: Notificación
 ---
 

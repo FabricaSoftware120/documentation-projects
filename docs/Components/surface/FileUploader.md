@@ -1,4 +1,5 @@
 ---
+id: file-uploader
 title: Cargar archivo
 ---
 

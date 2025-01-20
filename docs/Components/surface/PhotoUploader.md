@@ -1,4 +1,5 @@
 ---
+id: photo-uploader
 title: Cargar foto
 ---
 

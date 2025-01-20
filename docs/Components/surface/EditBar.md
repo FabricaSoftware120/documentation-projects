@@ -1,4 +1,5 @@
 ---
+id: edit-bar
 title: Barra de edición
 ---
 

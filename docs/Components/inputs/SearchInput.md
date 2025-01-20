@@ -1,4 +1,5 @@
 ---
+id: search-input
 title: Input busqueda
 ---
 

@@ -1,4 +1,5 @@
 ---
+id: nav-bar
 title: NavBar
 ---
 

@@ -1,4 +1,5 @@
 ---
+id: select-input
 title: Input selección
 ---
 

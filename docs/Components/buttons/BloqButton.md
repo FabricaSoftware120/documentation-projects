@@ -1,4 +1,5 @@
 ---
+id: bloq-button
 title: Botón de bloqueo
 ---
 

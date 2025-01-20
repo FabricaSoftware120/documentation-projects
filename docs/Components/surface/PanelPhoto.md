@@ -1,4 +1,5 @@
 ---
+id: panel-photo
 title: Foto de perfil
 ---
 

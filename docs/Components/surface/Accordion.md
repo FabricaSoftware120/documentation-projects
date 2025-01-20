@@ -1,4 +1,5 @@
 ---
+id: accordion
 title: Acordeon
 ---
 

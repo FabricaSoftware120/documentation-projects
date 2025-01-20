@@ -1,4 +1,5 @@
 ---
+id: notification-information
 title: Información de notificación
 ---
 

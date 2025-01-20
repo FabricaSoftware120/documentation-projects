@@ -1,4 +1,5 @@
 ---
+id: config-menu
 title: Menú de configuración
 ---
 

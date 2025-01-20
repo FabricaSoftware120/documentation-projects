@@ -1,4 +1,5 @@
 ---
+id: config-button
 title: Boton de configuración
 ---
 

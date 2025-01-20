@@ -1,4 +1,5 @@
 ---
+id: simple-button
 title: Input simple
 ---
 

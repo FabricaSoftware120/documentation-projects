@@ -1,4 +1,5 @@
 ---
+id: simple-table
 title: Tabla simple
 ---
 
