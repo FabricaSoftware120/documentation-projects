@@ -12,6 +12,7 @@ title: Instalación
 - [Descarga del repositorio](#descarga-del-repositorio)
 - [Instalación de dependencias](#instalación-de-dependencias)
 
+
 ## Funcionamiento técnico
 
 ### Herramientas necesarias
