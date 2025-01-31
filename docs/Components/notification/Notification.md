@@ -18,7 +18,8 @@ El componente `Notification` se encarga de mostrar una lista de notificaciones, 
 |                   |                      | - `isNotification` (`boolean`): Indica si la notificación está leída o no.                                      |
 |                   |                      | - `linkCase` (`string`): Enlace al que se dirige cuando se hace clic en la notificación.                       |
 |                   |                      | - `isExternalLink` (`boolean`): Indica si el enlace es externo o no.                                           |
-| `link`            | `string`             | Un enlace para redirigir al usuario a una página donde se pueden ver todas las notificaciones.                  |
+| `link`            | `string` (opcional)            | Un enlace para redirigir al usuario a una página donde se pueden ver todas las notificaciones.                  |
+| `infoNotification`            | `function` (opcional)             | Función que se ejecuta al hacer clic en el contenedor de notificaciones.                 |
 
 ## Comportamiento
 
@@ -41,4 +42,5 @@ const notifications = [
   isNotification={true}
   notification={notifications}
   link="/notificaciones"
+  infoNotification={() => console.log("Notificación clickeada")}
 />
