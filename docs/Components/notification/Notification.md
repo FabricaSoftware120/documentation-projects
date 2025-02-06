@@ -9,17 +9,18 @@ El componente `Notification` se encarga de mostrar una lista de notificaciones, 
 
 ## Propiedades
 
-| Propiedad         | Tipo                 | Descripción                                                                                                     |
-|-------------------|----------------------|-----------------------------------------------------------------------------------------------------------------|
-| `isNotification`  | `boolean`            | **Opcional**: Determina si se está viendo la página de notificaciones completas (`true`) o un resumen de ellas (`false`). <br /> **Valor predeterminado:** `false` |
-| `notification`    | `Array<Object>`      | Lista de notificaciones que se pasarán al componente. Cada notificación debe tener las siguientes propiedades:    |
-|                   |                      | - `nameCase` (`string`): Nombre o descripción del caso.                                                        |
-|                   |                      | - `timeCase` (`string`): Tiempo transcurrido desde que la notificación fue creada.                             |
-|                   |                      | - `isNotification` (`boolean`): Indica si la notificación está leída o no.                                      |
-|                   |                      | - `linkCase` (`string`): Enlace al que se dirige cuando se hace clic en la notificación.                       |
-|                   |                      | - `isExternalLink` (`boolean`): Indica si el enlace es externo o no.                                           |
-| `link`            | `string` (opcional)            | Un enlace para redirigir al usuario a una página donde se pueden ver todas las notificaciones.                  |
-| `infoNotification`            | `function` (opcional)             | Función que se ejecuta al hacer clic en el contenedor de notificaciones.                 |
+| Propiedad          | Tipo                  | Descripción                                                                                                                                                        |
+| ------------------ | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------- |
+| `isNotification`   | `boolean`             | **Opcional**: Determina si se está viendo la página de notificaciones completas (`true`) o un resumen de ellas (`false`). <br /> **Valor predeterminado:** `false` |
+| `notification`     | `Array<Object>`       | Lista de notificaciones que se pasarán al componente. Cada notificación debe tener las siguientes propiedades:                                                     |
+|                    |                       | - `nameCase` (`string`): Nombre o descripción del caso.                                                                                                            |
+|                    |                       | - `timeCase` (`string`): Tiempo transcurrido desde que la notificación fue creada.                                                                                 |
+|                    |                       | - `isNotification` (`boolean`): Indica si la notificación está leída o no.                                                                                         |
+|                    |                       | - `linkCase` (`string`): Enlace al que se dirige cuando se hace clic en la notificación.                                                                           |
+|                    |                       | - `isExternalLink` (`boolean`): Indica si el enlace es externo o no.                                                                                               |
+| `link`             | `string` (opcional)   | Un enlace para redirigir al usuario a una página donde se pueden ver todas las notificaciones.                                                                     |
+| `infoNotification` | `function` (opcional) | Función que se ejecuta al hacer clic en el contenedor de notificaciones.                                                                                           |
+| `onNavigate`       | function              | `undefined`                                                                                                                                                        | Función para manejar la navegación a otras páginas. |
 
 ## Comportamiento
 
@@ -42,5 +43,7 @@ const notifications = [
   isNotification={true}
   notification={notifications}
   link="/notificaciones"
-  infoNotification={() => console.log("Notificación clickeada")}
+  infoNotification={() => console.log("Notificación clickeada")
+  onNavigate={(url) => console.log("Navegando a:", url)}
 />
+```
