@@ -3,28 +3,40 @@ id: edit-bar
 title: Barra de edición
 ---
 
-# Barra de edición
+# Componente `EditBar`
 
-Este componente renderiza una barra de edición que incluye tres botones: "Editar", "Guardar" y "Cancelar". Dependiendo del estado de `isEditable`, el botón "Editar" es visible o se muestran los botones "Guardar" y "Cancelar".
+Este componente proporciona una barra de edición con los botones **"Editar"**, **"Agregar"**, **"Guardar"** y **"Cancelar"**.  
+Su comportamiento depende del estado de `isEditable` y de la acción de agregar (`isAdding`).
 
-Las funciones para manejar las acciones de estos botones (editar, guardar, cancelar) pueden ser personalizadas a través de las props `onEdit`, `onSave`, y `onCancel`.
+## 📌 **Estados y Comportamiento**
+- **Modo normal (`isEditable=false`, `isAdding=false`)**:  
+  Muestra los botones **"Editar"** y, opcionalmente, **"Agregar"**.
+- **Modo agregar (`isAdding=true`)**:  
+  Se oculta la barra y se muestra solo un botón **"Volver"** para regresar al estado anterior.
+- **Modo edición (`isEditable=true`)**:  
+  Se ocultan **"Editar"** y **"Agregar"**, y se muestran **"Guardar"** y **"Cancelar"**.
 
-### Propiedades
+---
 
-| Prop         | Tipo       | Descripción                                                                                                                                | Requerido | Valor Predeterminado |
-| ------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------ | --------- | -------------------- |
-| `isEditable` | `boolean`  | Define si la barra está en modo de edición. Si es `true`, el botón "Editar" se muestra; si es `false`, se muestran "Guardar" y "Cancelar". | No        | `false`              |
-| `onEdit`     | `Function` | Función que se ejecuta al hacer clic en el botón "Editar". Por defecto es una función vacía.                                               | No        | `() => {}`           |
-| `onSave`     | `Function` | Función que se ejecuta al hacer clic en el botón "Guardar". Por defecto es una función vacía.                                              | No        | `() => {}`           |
-| `onCancel`   | `Function` | Función que se ejecuta al hacer clic en el botón "Cancelar". Por defecto es una función vacía.                                             | No        | `() => {}`           |
+## ⚙️ **Props**
+| Propiedad         | Tipo      | Default  | Descripción |
+|------------------|----------|----------|-------------|
+| `isEditable`     | `boolean` | `false`  | Define si el componente está en modo de edición. |
+| `showAddButton`  | `boolean` | `true`   | Define si se muestra el botón **"Agregar"**. |
+| `onEdit`         | `function` | `() => {}` | Función ejecutada al hacer clic en **"Editar"**. |
+| `onAdd`          | `function` | `() => {}` | Función ejecutada al hacer clic en **"Agregar"**. |
+| `onCancel`       | `function` | `() => {}` | Función ejecutada al hacer clic en **"Cancelar"**. |
+| `onSave`         | `function` | `() => {}` | Función ejecutada al hacer clic en **"Guardar"**. |
 
-### Ejemplo de uso
+---
 
+## 🛠 **Ejemplo de Uso**
 ```tsx
 <EditBar
-  isEditable={true}
-  onEdit={() => console.log("Editar acción")}
-  onSave={() => console.log("Guardar acción")}
-  onCancel={() => console.log("Cancelar acción")}
+  isEditable={false}
+  showAddButton={true}
+  onEdit={() => console.log("Modo edición activado")}
+  onAdd={() => console.log("Agregando nuevo elemento")}
+  onCancel={() => console.log("Cancelando edición")}
+  onSave={() => console.log("Guardando cambios")}
 />
-```
