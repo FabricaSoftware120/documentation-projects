@@ -6,15 +6,16 @@ El componente `FilterableMultiSelect` proporciona un selector de opciones filtra
 
 ## Props
 
-| Prop       | Tipo                                 | Descripción                                           | Opcional | Valor por defecto |
-| ---------- | ------------------------------------ | ----------------------------------------------------- | -------- | ----------------- |
-| `options`  | `{ id: string; label: string; }[]`   | Lista de opciones disponibles para seleccionar.       | ❌       | `[]`              |
+| Prop        | Tipo                                 | Descripción                                           | Opcional | Valor por defecto |
+|------------|--------------------------------------|------------------------------------------------------|----------|------------------|
+| `options`  | `{ id: string; label: string; }[]`  | Lista de opciones disponibles para seleccionar.      | ❌       | `[]`              |
 | `onChange` | `(selectedValues: string[]) => void` | Función que recibe el array de valores seleccionados. | ❌       | -                 |
+| `isDisabled` | `boolean` | Indica si el selector debe estar deshabilitado. | ✅ | `false` |
 
 ## Ejemplo de uso
 
 ```tsx
-import FilterableMultiSelect from "./components/FiltrableMultiselect";
+import FilterableMultiSelect from "./components/FilterableMultiSelect";
 
 function App() {
   const options = [
@@ -33,6 +34,7 @@ function App() {
       <FilterableMultiSelect
         options={options}
         onChange={handleSelectionChange}
+        isDisabled={false}
       />
     </div>
   );
